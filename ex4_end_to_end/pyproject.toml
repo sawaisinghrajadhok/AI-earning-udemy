@@ -1,0 +1,15 @@
+[build-system]
+requires=["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name="endtoend"
+version="0.0.1"
+description="for learning"
+authors=[
+    {name="Sawai Singh"}
+]
+
+dependencies=[
+    "numpy", "pandas", "matplotlib"
+]

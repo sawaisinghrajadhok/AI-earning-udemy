@@ -1,0 +1,10 @@
+[ 2026-06-03 07:57:32,876 ] - logger.py - 20 - root - INFO - Logging has started . . . .
+[ 2026-06-03 07:57:33,463 ] - data_ingestion.py - 26 - root - INFO - Entered the data ingestion method or component
+[ 2026-06-03 07:57:33,465 ] - data_ingestion.py - 52 - root - ERROR - operation failed due to: 'DataIngestion' object has no attribute 'data_ingestion_config'
+[ 2026-06-03 07:57:33,465 ] - exception.py - 21 - root - INFO - Error occurred in python script name [/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/components/data_ingestion.py] line number [30] error message ['DataIngestion' object has no attribute 'data_ingestion_config']
+[ 2026-06-03 07:57:33,465 ] - exception.py - 24 - root - ERROR - <traceback object at 0x78c37498d400>
+Traceback (most recent call last):
+  File "/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/components/data_ingestion.py", line 30, in initiate_data_ingestion
+    self.data_ingestion_config.raw_data_path)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DataIngestion' object has no attribute 'data_ingestion_config'
