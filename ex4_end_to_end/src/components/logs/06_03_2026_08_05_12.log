@@ -1,8 +1,0 @@
-[ 2026-06-03 08:05:12,557 ] - logger.py - 20 - root - INFO - Logging has started . . . .
-[ 2026-06-03 08:05:13,106 ] - data_ingestion.py - 26 - root - INFO - Entered the data ingestion method or component
-[ 2026-06-03 08:05:13,108 ] - data_ingestion.py - 29 - root - INFO - data source read successfully and converted into the df, storing the raw data in: artifact/raw_data.csv
-[ 2026-06-03 08:05:13,110 ] - data_ingestion.py - 34 - root - INFO - raw data stored successfully at this path: artifact/raw_data.csv
-[ 2026-06-03 08:05:13,112 ] - data_ingestion.py - 38 - root - INFO - storing train data at: artifact/train.csv
-[ 2026-06-03 08:05:13,113 ] - data_ingestion.py - 40 - root - INFO - train data stored successfully at: artifact/train.csv
-[ 2026-06-03 08:05:13,113 ] - data_ingestion.py - 42 - root - INFO - storing test data at: artifact/test.csv
-[ 2026-06-03 08:05:13,114 ] - data_ingestion.py - 44 - root - INFO - test data stored successfully at: artifact/test.csv
