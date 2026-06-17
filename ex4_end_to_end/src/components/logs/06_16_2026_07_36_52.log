@@ -1,0 +1,41 @@
+[ 2026-06-16 07:36:52,863 ] - logger.py - 20 - root - INFO - Logging has started . . . .
+[ 2026-06-16 07:36:52,866 ] - data_ingestion.py - 30 - root - INFO - Entered the data ingestion method or component
+[ 2026-06-16 07:36:52,869 ] - data_ingestion.py - 33 - root - INFO - data source read successfully and converted into the df, storing the raw data in: artifact/raw_data.csv
+[ 2026-06-16 07:36:52,872 ] - data_ingestion.py - 41 - root - INFO - raw data stored successfully at this path: artifact/raw_data.csv
+[ 2026-06-16 07:36:52,874 ] - data_ingestion.py - 45 - root - INFO - storing train data at: artifact/train.csv
+[ 2026-06-16 07:36:52,876 ] - data_ingestion.py - 47 - root - INFO - train data stored successfully at: artifact/train.csv
+[ 2026-06-16 07:36:52,876 ] - data_ingestion.py - 49 - root - INFO - storing test data at: artifact/test.csv
+[ 2026-06-16 07:36:52,877 ] - data_ingestion.py - 51 - root - INFO - test data stored successfully at: artifact/test.csv
+[ 2026-06-16 07:36:52,877 ] - data_transformation.py - 71 - root - INFO - start reading the test and train data from csv
+[ 2026-06-16 07:36:52,878 ] - data_transformation.py - 74 - root - INFO - read the test and train data from csv
+[ 2026-06-16 07:36:52,879 ] - data_transformation.py - 76 - root - INFO - target column extraction from train and test dataset process initiated
+[ 2026-06-16 07:36:52,879 ] - data_transformation.py - 83 - root - INFO - target column extraction from train and test dataset process completed
+[ 2026-06-16 07:36:52,879 ] - data_transformation.py - 85 - root - INFO - applying preprocessing pipeline on the objects
+[ 2026-06-16 07:36:52,879 ] - data_transformation.py - 55 - root - INFO - pipelines defined for the numeric and category fields.
+[ 2026-06-16 07:36:52,880 ] - data_transformation.py - 56 - root - INFO - initializing the data transformation process.
+[ 2026-06-16 07:36:52,891 ] - data_transformation.py - 95 - root - INFO - saving the pre processor as pkl file
+[ 2026-06-16 07:36:52,892 ] - data_transformation.py - 97 - root - INFO - pre processor saved pkl file into disk
+[ 2026-06-16 07:36:52,893 ] - exception.py - 21 - root - INFO - Error occurred in python script name [/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py] line number [24] error message ['dict_keys' object is not subscriptable]
+[ 2026-06-16 07:36:52,893 ] - exception.py - 24 - root - ERROR - <traceback object at 0x7b63bfe42880>
+Traceback (most recent call last):
+  File "/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py", line 24, in evaluate_models
+    hyper_param = hyper_params[list(hyper_params.keys()[i])]
+                                    ~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'dict_keys' object is not subscriptable
+[ 2026-06-16 07:36:52,893 ] - exception.py - 21 - root - INFO - Error occurred in python script name [/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/components/model_trainer.py] line number [79] error message [Error occurred in python script name [/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py] line number [24] error message ['dict_keys' object is not subscriptable]]
+[ 2026-06-16 07:36:52,893 ] - exception.py - 24 - root - ERROR - <traceback object at 0x7b63c203fd00>
+Traceback (most recent call last):
+  File "/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py", line 24, in evaluate_models
+    hyper_param = hyper_params[list(hyper_params.keys()[i])]
+                                    ~~~~~~~~~~~~~~~~~~~^^^
+TypeError: 'dict_keys' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/components/model_trainer.py", line 79, in initiate_model_trainer
+    model_reports = utils.evaluate_models(x_train, x_test, y_train, y_test, models, hyper_params)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py", line 42, in evaluate_models
+    raise CustomException(e)
+ex4_end_to_end.src.exception.CustomException: Error occurred in python script name [/home/sawai/PycharmProjects/AI-learning/ex4_end_to_end/src/utils.py] line number [24] error message ['dict_keys' object is not subscriptable]

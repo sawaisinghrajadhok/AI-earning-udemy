@@ -1,8 +1,0 @@
-[ 2026-05-28 08:31:40,081 ] - logger.py - 20 - root - INFO - Logging has started . . . .
-[ 2026-05-28 08:31:40,081 ] - exception.py - 17 - root - INFO - Error occurred in python script name [/home/sawai/PycharmProjects/ex3_end_to_end/src/Ex1_exception_raiser.py] line number [5] error message [division by zero]
-[ 2026-05-28 08:31:40,081 ] - exception.py - 18 - root - ERROR - <traceback object at 0x7d0a5027bb00>
-Traceback (most recent call last):
-  File "/home/sawai/PycharmProjects/ex3_end_to_end/src/Ex1_exception_raiser.py", line 5, in <module>
-    value = 50/0
-            ~~^~
-ZeroDivisionError: division by zero

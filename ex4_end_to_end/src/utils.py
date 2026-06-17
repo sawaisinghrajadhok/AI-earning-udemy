@@ -1,6 +1,7 @@
 import os
 import dill
 from sklearn.metrics import r2_score
+from sklearn.model_selection import GridSearchCV
 
 from ex4_end_to_end.src.exception import CustomException
 
@@ -15,11 +16,17 @@ def save_preprocessor(preprocessing_obj, preprocessor_obj_file_path):
         raise CustomException(e)
 
 
-def evaluate_models(x_train, x_test, y_train, y_test, models: dict):
+def evaluate_models(x_train, x_test, y_train, y_test, models: dict, hyper_params):
     try:
         reports = {}
         for i in range(len(list(models.values()))):
             model = list(models.values())[i]
+            hyper_param = hyper_params[list(hyper_params.keys())[i]]
+
+            gs = GridSearchCV(model, hyper_param, cv=3)
+            gs.fit(x_train, y_train)
+
+            model.set_params(**gs.best_params_)
             model.fit(x_train, y_train) # train model
 
             y_train_pred = model.predict(x_train)

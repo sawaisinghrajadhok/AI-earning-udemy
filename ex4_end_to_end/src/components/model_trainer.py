@@ -41,7 +41,42 @@ class ModelTrainer:
                 "AdaBoost": AdaBoostRegressor()
             }
 
-            model_reports = utils.evaluate_models(x_train, x_test, y_train, y_test, models)
+            hyper_params = {
+                "Random Forest": {
+                    # 'criterion':['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+
+                    # 'max_features':['sqrt','log2',None],
+                    'n_estimators': [8, 16, 32, 64, 128, 256]
+                },
+                "Decision Tree": {
+                    'criterion': ['squared_error', 'friedman_mse', 'absolute_error', 'poisson'],
+                    # 'splitter':['best','random'],
+                    # 'max_features':['sqrt','log2'],
+                },
+                "Linear Regression": {},
+                "K-Neighbour Regressor": {
+                    'n_neighbors': [5, 7, 9, 11],
+                    # 'weights':['uniform','distance'],
+                    # 'algorithm':['ball_tree','kd_tree','brute']
+                },
+                "XGBRegressor": {
+                    'learning_rate': [.1, .01, .05, .001],
+                    'n_estimators': [8, 16, 32, 64, 128, 256]
+                },
+                "CatBoosting Regressor": {
+                    'depth': [6, 8, 10],
+                    # 'learning_rate': [0.01, 0.05, 0.1],
+                    'iterations': [30, 50, 100]
+                },
+                "AdaBoost Regressor": {
+                    'learning_rate': [.1, .01, 0.5, .001],
+                    # 'loss':['linear','square','exponential'],
+                    'n_estimators': [8, 16, 32, 64, 128, 256]
+                }
+
+            }
+
+            model_reports = utils.evaluate_models(x_train, x_test, y_train, y_test, models, hyper_params)
             logging.info(f"Model name with r2 score {model_reports}")
 
             # finding best model score

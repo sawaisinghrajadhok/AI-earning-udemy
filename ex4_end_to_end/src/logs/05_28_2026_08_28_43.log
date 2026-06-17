@@ -1,2 +1,0 @@
-[ 2026-05-28 08:28:43,534 ] - logger.py - 20 - root - INFO - Logging has started . . . .
-[ 2026-05-28 08:28:43,535 ] - exception.py - 17 - root - INFO - Error occurred in python script name [/home/sawai/PycharmProjects/ex3_end_to_end/src/Ex1_exception_raiser.py] line number [5] error message [division by zero]
