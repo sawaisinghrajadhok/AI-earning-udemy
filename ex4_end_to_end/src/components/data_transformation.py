@@ -85,6 +85,7 @@ class DataTransformation:
             logging.info("applying preprocessing pipeline on the objects")
             preprocessing_obj = self.get_data_transformer_object()
 
+            # here one more important thing is: this transform take data frame as input and generate the numpy array (actually matrix of numbers) as an output
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
 
             # we never apply fit_transform on the test data, because fit means learning for model, and if model learns from the test data

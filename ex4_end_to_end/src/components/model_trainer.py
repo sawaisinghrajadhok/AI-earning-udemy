@@ -94,7 +94,8 @@ class ModelTrainer:
                 logging.info(f"No model is perfect for given dataset.")
             else:
                 logging.info(f"Storing model into the model.pkl file")
-                best_model = model_reports[best_model_name]
+                best_model = models[best_model_name]
+                print("======== ye save ho rha h ==================", best_model)
                 utils.save_object(ModelTrainerConfig.trained_model_file_path, best_model)
                 logging.info(f"model file stored successfully at: {ModelTrainerConfig.trained_model_file_path}")
         except Exception as e:

@@ -54,4 +54,16 @@ def save_object(file_path, obj):
 
 
 
+def load_pkl_file(file_path):
+    try:
+        print("====================================================")
+        print("loading this file ", file_path)
+        with open(file_path, "rb") as file_obj:
+            obj = dill.load(file_obj)
+            print("data type ============================================", type(obj))
+            print(obj)
+            return obj
+    except Exception as e:
+        raise CustomException(e)
+
 

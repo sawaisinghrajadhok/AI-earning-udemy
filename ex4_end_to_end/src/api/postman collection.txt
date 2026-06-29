@@ -1,0 +1,31 @@
+curl --location 'http://localhost:8000/welcome'
+
+
+curl --location 'http://localhost:8000/welcome-json-data'
+
+
+curl --location 'http://localhost:8000/data-post' \
+--header 'Content-Type: application/json' \
+--data '{
+"name":"sawai singh charan",
+"age":"30",
+"gender":"M"
+}'
+
+
+
+This is the API for the prediction:
+curl --location 'http://localhost:8000/predict' \
+--header 'Content-Type: application/json' \
+--data '{
+    "gender":"male",
+    "race/ethnicity":"group D",
+    "parental level of education":"high school",
+    "lunch":"standard",
+    "test preparation course":"completed",
+    "reading score":"64",
+    "writing score":"66"
+}
+'
+
+
